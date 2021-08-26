@@ -1,0 +1,29 @@
+.weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.weather__btn {
+  width: 10em;
+  padding: 0.5em;
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  outline: none;
+  border: 1px solid #000;
+  box-shadow: 3px 3px;
+}
+
+.weather__temp{
+  font-size: 2.5em;
+}
+.weather__btn_type_active {
+  background-color: rgb(126, 126, 126)
+}
+
+.weather__btn:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
