@@ -1,7 +1,10 @@
 const fetch = require("node-fetch");
 const { REDIS_PORT } = require("../utils/consts");
 const redis = require("redis");
-const client = redis.createClient(REDIS_PORT);
+const client = redis.createClient({
+  host: "redis-server",
+  port: REDIS_PORT,
+});
 const URL =
   "https://api.openweathermap.org/data/2.5/weather?q=Moscow&appid=4c8353c91ed7f96ebc64690123a3758a";
 
