@@ -19,11 +19,16 @@
 .weather__temp{
   font-size: 2.5em;
 }
-.weather__btn_type_active {
-  background-color: rgb(126, 126, 126)
+.weather__btn_type_inabled {
+  background-color: rgb(255, 255, 255)
 }
 
-.weather__btn:hover{
+.weather__btn_type_disabled {
+  background-color: rgb(126, 126, 126)
+
+}
+
+.weather__btn_type_inabled:hover{
   opacity: 0.8;
   cursor: pointer;
 }
