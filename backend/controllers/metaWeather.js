@@ -1,7 +1,10 @@
 const fetch = require("node-fetch");
 const { REDIS_PORT } = require("../utils/consts");
 const redis = require("redis");
-const client = redis.createClient(REDIS_PORT);
+const client = redis.createClient({
+  host: "redis-server",
+  port: REDIS_PORT,
+});
 const URL = "https://www.metaweather.com/api/location/2122265/";
 
 module.exports.getWeatherByMeta = (req, res) => {

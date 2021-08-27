@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  redis-server:
+    image: "redis"
+  backend:
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+    image: "backend"
+    ports:
+      - "3000:3000"
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile
+    image: "frontend"
+    ports:
+      - "3006:3006"
+    links:
+      - "backend:be"

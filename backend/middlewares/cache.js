@@ -1,6 +1,9 @@
 const { REDIS_PORT } = require("../utils/consts");
 const redis = require("redis");
-const client = redis.createClient(REDIS_PORT);
+const client = redis.createClient({
+  host: "redis-server",
+  port: REDIS_PORT,
+});
 
 module.exports.cache = (req, res, next) => {
   client.get("tempOpen", (err, data) => {
